@@ -24,10 +24,10 @@ for j in scrap:
         elif i == 5:
             data['isya'] = j.get_text()
     else:
-        data['date'] = j.get_text() + ' ' + datt + ' di ' + place
+        data['date'] = j.get_text() + ' ' + datt + ' in ' + place
     i += 1
 
-print(f"jadwal sholat pada tanggal {data['date']}, yaitu:")
+print(f"prayer schedule on {data['date']}:")
 print(f"subuh: {data['subuh']}")
 print(f"dzuhur: {data['dzuhur']}")
 print(f"ashar: {data['ashar']}")
