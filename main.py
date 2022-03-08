@@ -4,13 +4,11 @@ from bs4 import BeautifulSoup
 req = requests.get('http://jadwalsholat.pkpu.or.id/?id=308')
 soup = BeautifulSoup(req.text, 'html.parser')
 
-scrap = soup.find_all('tr', 'table_highlight')
-scrap = scrap[0]
-
-data = {}
-
 datt = soup.find('td', {'align': 'center'}).find('b').text
 place = soup.find('td', {'align': 'center'}).find('small').find('b').text
+scrap = soup.find_all('tr', 'table_highlight')
+scrap = scrap[0]
+data = {}
 
 i = 0
 for j in scrap:
